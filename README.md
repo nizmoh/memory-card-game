@@ -1,20 +1,14 @@
 # Memory Game Project
 
-## Table of Contents
+## How to play
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+The objective of this game to flip two matching cards one after another. If the cards match, they stay flipped and turn green.
 
-## Instructions
+> Tip: Remembering the locations of the previously opened cards will help you solve the game faster!
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+## Game Details
 
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+- There is also a timer so try to finish the game as soon as possible.
+- The star rating starts with 3 stars for 15 or less moves and 2 stars for 23 or less moves. If you make over 23 moves, you get only 1 star as for your game performance.
+- Once the game is finished, you will information about your performance
+- You can restart the game at anytime by clicking the reset button

@@ -68,20 +68,21 @@ deck.addEventListener('click', event => {
       startClock();
       clockOff = false;
     }
+
+    toggleCard(clickTarget);
+    addToggleCard(clickTarget);
+    if(toggledCards.length === 2) {
+      checkForMatch(clickTarget);
+      addMove();
+      checkScore();
+    }
+    console.log(matched);
+    const totalPairs = 8;
+    if(matched === totalPairs){
+      gameOver();
+    }
   }
 
-  toggleCard(clickTarget);
-  addToggleCard(clickTarget);
-  if(toggledCards.length === 2) {
-    checkForMatch(clickTarget);
-    addMove();
-    checkScore();
-  }
-  console.log(matched);
-  const totalPairs = 8;
-  if(matched === totalPairs){
-    gameOver();
-  }
 });
 
 // add add event listners to close modals
@@ -109,6 +110,7 @@ function resetCards() {
     element.classList.remove('show');
     element.classList.remove('match');
   });
+  toggledCards = [];
 }
 
 
@@ -149,6 +151,7 @@ function isClickValid(clickTarget) {
   return(
     clickTarget.classList.contains('card') &&
     !clickTarget.classList.contains('match') &&
+    !clickTarget.classList.contains('open') &&
     toggledCards.length < 2 &&
     !toggledCards.includes(clickTarget)
   );
